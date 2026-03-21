@@ -1,0 +1,60 @@
+{
+  "name": "@axobot/mppx",
+  "version": "0.1.0",
+  "description": "Lightning-native Machine Payments Protocol SDK with pluggable payment adapters",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbdpay/axobot-mppx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zbdpay/axobot-mppx/issues"
+  },
+  "homepage": "https://github.com/zbdpay/axobot-mppx#readme",
+  "keywords": [
+    "axo",
+    "axobot",
+    "mpp",
+    "mppx",
+    "lightning"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "npm run typecheck",
+    "release": "semantic-release",
+    "release:dry-run": "SEMANTIC_RELEASE_DRY_RUN=true semantic-release --dry-run --no-ci",
+    "test": "npm run build && node --test test/**/*.test.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^13.1.4",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/node": "^24.3.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release": "^25.0.3",
+    "typescript": "^5.9.2"
+  }
+}
