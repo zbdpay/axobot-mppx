@@ -1,6 +1,6 @@
 {
   "name": "@axobot/mppx",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Lightning-native Machine Payments Protocol SDK with pluggable payment adapters",
   "license": "MIT",
   "repository": {
